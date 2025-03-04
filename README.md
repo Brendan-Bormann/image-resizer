@@ -21,3 +21,6 @@ src="http://localhost:3000/image/resize?url=https%3A%2F%2Fi.imgur.com%2Frtp5odd.
 *Please note that you will need to URL encode the original source URL. There are many great web tools to do this.*
 
 And that's it! your `img` tag will now be loading a resize image.
+
+### Testing
+You can run the tests with `npm test`
