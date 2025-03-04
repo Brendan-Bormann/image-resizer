@@ -8,9 +8,7 @@ const ImageService = {
      */
     getImage: async (url: string): Promise<Buffer<ArrayBuffer>> => {
         const response = await fetch(url);
-        const buffer = Buffer.from(await response.arrayBuffer());
-
-        return buffer;
+        return Buffer.from(await response.arrayBuffer());
     },
 
     /**
@@ -21,9 +19,7 @@ const ImageService = {
      * @returns - modified buffer array
      */
     resizeImage: async (buffer: Buffer<ArrayBuffer>, width: number, height: number): Promise<Buffer<ArrayBuffer>> => {
-        const resizedImage = await sharp(buffer).resize(Number(width), Number(height)).toBuffer();
-
-        return resizedImage;
+        return await sharp(buffer).resize(Number(width), Number(height)).toBuffer();
     }
 }
 
